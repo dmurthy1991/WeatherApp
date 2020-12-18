@@ -1,25 +1,22 @@
 import { Injectable } from "@angular/core";
-import { throwError } from "rxjs";
-import { catchError, map } from "rxjs/operators";
+import { map } from "rxjs/operators";
+import { Constants } from "./constants";
 
 import {
   HttpClient,
   HttpHeaders,
-  HttpErrorResponse
 } from "@angular/common/http";
 
 @Injectable({
   providedIn: "root"
 })
 export class FivedayweatherService {
-  endpoint: string = "https://api.openweathermap.org/data/2.5/forecast/daily";
   headers = new HttpHeaders().set("Content-Type", "text/plain");
-  apiKey = "c51223c219d6aec8cb8c5210449bd859";
   constructor(private http: HttpClient) {}
 
   getFiveDayWeather(cityName:any) {
-    let API_URL = `${this.endpoint}?q=${cityName}&cnt=5&units=metric&appid=${
-      this.apiKey
+    let API_URL = `${Constants.API_URL.fivedayweather}?q=${cityName}&cnt=5&units=metric&appid=${
+      Constants.API_URL.api_key
     }`;
 
     return this.http.get(API_URL, { headers: this.headers }).pipe(
