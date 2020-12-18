@@ -6,22 +6,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Description
+1. This app provides you a panel to enter city of your choice to get current weather.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. You can add up to 8 cities. If you add more then city that was added at the start will be deleted.
 
-## Build
+3. You can click refresh on any particular city refresh icon to get updated weather.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+4. You can click delete on any particular city to delete that city from the list.
 
-## Running unit tests
+5. You can click on clear button to delete all the cities in the list at once.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+6. You can click on city name to get a 5 day weather report for that city on another panel.
 
-## Running end-to-end tests
+7. You can click refresh on refresh icon to get updated weather on the new panel.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
