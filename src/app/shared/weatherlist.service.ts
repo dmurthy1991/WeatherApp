@@ -15,7 +15,6 @@ export class WeatherlistService {
 
   getWeather(cityName:any) {
     let API_URL = `${Constants.API_URL.weatherlist}?q=${cityName}&units=metric&appid=${Constants.API_URL.api_key}`;
-    console.log('API');
 
     return this.http.get(API_URL, { headers: this.headers }).pipe(
       map((res: Response) => {
