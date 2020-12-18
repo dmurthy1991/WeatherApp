@@ -1,0 +1,46 @@
+<html>
+
+<head> </head>
+
+<body>
+	<div>
+		<h1 class="icons">{{currentCityName}}</h1>
+		<span>
+        <i class="material-icons sync" (click)="refreshWeather()">
+          sync
+        </i>
+      </span>
+	</div>
+
+	<div class="top-panel">
+		<div class="weatherImage">
+			<img
+          class="todayWeather"
+          src="{{'assets/images/' + weeklyWeatherArr[0]?.weather + '.svg'}}"
+          alt="assets/images/weather.svg"
+        />
+      </div>
+			<div class="weatherContent" *ngIf="weeklyWeatherArr[0]">
+				<p>{{weeklyWeatherArr[0].temp + "C"}}</p>
+
+				<p>{{weeklyWeatherArr[0]?.weather}}</p>
+				<p>{{"Wind: " + weeklyWeatherArr[0]?.wind}}</p>
+				<p>{{"Pressure " + weeklyWeatherArr[0]?.pressure}}</p>
+			</div>
+		</div>
+
+		<div class="flex-container">
+			<div *ngFor="let eachDay of weeklyWeatherArr ; let i = index">
+				<p>{{eachDay.date}}</p>
+				<p>{{eachDay.day}}</p>
+				<img
+          class="weeklyWeather"
+          src="{{'assets/images/' + eachDay.weather + '.svg'}}"
+          alt="assets/images/weather.svg"
+        />
+				<p>{{eachDay.temp + "C"}}</p>
+			</div>
+		</div>
+</body>
+
+</html>

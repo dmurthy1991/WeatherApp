@@ -1,0 +1,66 @@
+body {
+    position: absolute;
+    top: 2%;
+    left: 28%;
+    width: 70%;
+    border: 1px solid black;
+    height:95%;
+  }
+  .todayWeather {
+    height: 200px;
+    width: 200px;
+    border: 0.5px solid black;
+  }
+  .icons {
+    position: absolute;
+    display: inline;
+    padding-left: 4%;
+    top: 2%;
+    font-weight: bold;
+  }
+  .sync {
+    position: absolute;
+    float: right;
+    top: 2%;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 5%;
+  }
+  .flex-container p {
+    text-align: left;
+    margin-left: 20%;
+  }
+  
+  .flex-container > div {
+    flex-grow: 2;
+  }
+  .weeklyWeather {
+    height: 100px;
+    width: 100px;
+    border: 0.5px solid black;
+  }
+  .top-panel {
+    display: flex;
+    margin-top: 10%;
+  }
+  .weatherImage {
+    margin: 5%;
+  }
+  .weatherContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 4%;
+  }
+  .weatherContent p {
+    padding-bottom: 4%;
+  }
+  

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'weather-app';
+  name = "";
+
+  cityName(name) {
+    this.name = name;
+  }
 }

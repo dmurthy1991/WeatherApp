@@ -1,0 +1,52 @@
+<html>
+
+<head> </head>
+
+<body>
+	<div class = "cityInput">
+		<input
+        type="text"
+        class="cityName"
+        placeholder="Enter City Name"
+        #cityName
+      />
+		<span class="addButton" (click)="getWeather(cityName)">
+        <i class="material-icons">add</i>
+      </span>
+	</div>
+	<p class="err" *ngIf="cityExists">This city already exisits</p>
+	<p class="err" *ngIf="notValidCityName">Please Enter a Valid City Name</p>
+
+	<hr class="boldDivider" />
+	<div>
+		<span class="recentLocations"> Recent Locations</span>
+		<hr />
+	</div>
+
+	<div class="flex-container" *ngFor="let city of weatherArr; let i = index">
+		<mat-card [style.background-image]="'url(assets/images/' + city?.weather + '.svg)'">
+			<mat-card-content>
+				<p class="info" (click)="sendCity(city.name)">
+					{{city.name + " - " + city.temp + "C " + city.weather}}
+
+					<span class="icons">
+              <i class="material-icons sync" (click)="refreshWeather(city.name)">
+                sync
+              </i>
+              <i class="material-icons clear" (click)="deleteCity(i)">
+                clear
+              </i>
+            </span>
+				</p>
+			</mat-card-content>
+		</mat-card>
+		<hr />
+	</div>
+	<div class="clearCity">
+		<button  mat-stroked-button class="clearBtn" (click)="clearCities()">
+        Clear
+      </button>
+	</div>
+</body>
+
+</html>
