@@ -1,20 +1,19 @@
-<html>
 
-<head> </head>
 
-<body>
+<div class="body">
 	<div class = "cityInput">
 		<input
         type="text"
         class="cityName"
         placeholder="Enter City Name"
-        #cityName
+		#cityName
+		(keyup.enter) = "getWeather(cityName)"
       />
 		<span class="addButton" (click)="getWeather(cityName)">
         <i class="material-icons">add</i>
       </span>
 	</div>
-	<p class="err" *ngIf="cityExists">This city already exisits</p>
+	<p class="err" *ngIf="cityExists">This city already exists</p>
 	<p class="err" *ngIf="notValidCityName">Please Enter a Valid City Name</p>
 
 	<hr class="boldDivider" />
@@ -23,7 +22,7 @@
 		<hr />
 	</div>
 
-	<div class="flex-container" *ngFor="let city of weatherArr; let i = index">
+  	<div class="flex-container" *ngFor="let city of weatherArr; let i = index">
 		<mat-card [style.background-image]="'url(assets/images/' + city?.weather + '.svg)'">
 			<mat-card-content>
 				<p class="info" (click)="sendCity(city.name)">
@@ -47,6 +46,5 @@
         Clear
       </button>
 	</div>
-</body>
+</div>
 
-</html>

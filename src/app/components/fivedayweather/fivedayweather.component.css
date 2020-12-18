@@ -1,4 +1,4 @@
-body {
+.body {
     position: absolute;
     top: 2%;
     left: 28%;
@@ -58,9 +58,8 @@ body {
     flex: 1;
     justify-content: center;
     font-size: 18px;
-    margin-top: 4%;
   }
   .weatherContent p {
-    padding-bottom: 4%;
+    margin-bottom: 3%;
   }
   

@@ -21,6 +21,7 @@ export class WeatherlistComponent {
     this.weatherArr = [];
     this.notValidCityName = false;
     this.cityExists = false;
+    this.sendCity("");
   }
 
   // this method is used to delete one particular city.
